@@ -1,15 +1,11 @@
-import { Text, View } from "react-native";
+import * as React from "react";
+import { View } from "react-native";
 
-export default function Index() {
+import CardXpHeader from "../components/CardXpHeader";
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={{ flex: 1, justifyContent: "flex-start", padding: 45 }}>
+      <CardXpHeader /> 
     </View>
-  );
+  )
 }
