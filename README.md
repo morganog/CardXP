@@ -1,50 +1,38 @@
-# Welcome to your Expo app 👋
+# CardXP
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CardXP is a tool for scanning trading cards and centering them to evaluate if they are suitable for grading.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Scan trading cards using your device
+- Automatically center cards in the scanned image
+- Visualize centering to assess grading potential
+- Simple, user-friendly interface
 
-   ```bash
-   npm install
-   ```
+## Installation
 
-2. Start the app
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/CardXP.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd CardXP
+    ```
+3. Install dependencies:
+    ```bash
+    # Example for Node.js projects
+    npm install
+    ```
 
-   ```bash
-   npx expo start
-   ```
+## Usage
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+Start the application:
 ```bash
-npm run reset-project
+npm start
 ```
+Then open your browser and go to `http://localhost:3000`.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Contributing
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Contributions are welcome! Please open issues or submit pull requests.
