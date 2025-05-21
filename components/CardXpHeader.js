@@ -1,10 +1,27 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function CardXpHeader() {
+const headerStyles = StyleSheet.create({
+    container: {
+        flex: 0.2,
+        paddingBottom: 20,
+        backgroundColor: "white",
+        justifyContent: "center",   // center vertically
+        alignItems: "center",       // center horizontally
+    },
+    text: {
+        fontSize: 28,
+        fontFamily: "KronaOne-Regular",
+        color: "#484C61",
+    }
+});
+
+const CardXpHeader = () => {
     return (
-        <View style={{ flex: 0.2, backgroundColor: "white"}}>
-            <Text style={{ padding: 1, fontSize: 28, fontFamily: "KronaOne-Regular", color: "#484C61" }}>CardXP</Text>
+        <View style={headerStyles.container}>
+            <Text style={headerStyles.text}>CardXP</Text>
         </View>
     );
 }
+
+export default CardXpHeader;

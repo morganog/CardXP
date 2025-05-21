@@ -1,11 +1,22 @@
+export const navigationOptions = {
+  headerShown: false,
+};
+
 import * as React from "react";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import CardXpHeader from "../components/CardXpHeader";
 import PreScan from "../components/PreScan";
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+});
+
 export default function App() {
   return (
-    <View style={{ flex: 1, justifyContent: "flex-start", alignItems: "center", padding: 10, backgroundColor: "white" }}>
+    <View style={styles.container}>
       <CardXpHeader />
       <PreScan />
     </View>

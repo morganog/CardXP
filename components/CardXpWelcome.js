@@ -14,3 +14,6 @@ const CardXpWelcome = () => {
         </View>
     );
 };
+
+export default CardXpWelcome;
+// This component is a simple welcome screen for the CardXP app. It displays the app name and tagline in a centered view with a light gray background.
