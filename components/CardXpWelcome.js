@@ -1,16 +1,26 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+
+const welcomeStyle = StyleSheet.create({
+    container: {
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#f2f2f2"
+    },
+    title: {
+        color: 'white',
+        fontSize: 30
+    },
+    tagline: {
+        color: "white",
+        fontSize: 26
+    }
+});
 
 const CardXpWelcome = () => {
     return (
-        <View
-            style={{
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#f2f2f2"
-            }}
-        >
-            <Text style={{color: 'white', fontSize: 30}}>CardXP</Text>
-            <Text style={{color: "white", fontSize: 26}}>Scanner & Grader</Text>
+        <View style={welcomeStyle.container}>
+            <Text style={welcomeStyle.title}>CardXP</Text>
+            <Text style={welcomeStyle.tagline}>Scanner & Grader</Text>
         </View>
     );
 };

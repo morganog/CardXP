@@ -1,12 +1,32 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+
+const preScanStyle = StyleSheet.create({
+    container: {
+        justifyContent: "center",
+        alignItems: "center",
+        paddingBottom: 150,
+    },
+    title: {
+        color: 'rgba(72,76,97,0.8)',
+        textAlign: 'center',
+        fontSize: 20,
+    },
+    description: {
+        color: 'rgba(72,76,97,0.8)',
+        textAlign: 'center',
+        marginTop: 8,
+        maxWidth: 300,
+        fontSize: 14,
+    },
+});
 
 export default function PreScan() {
     return (
-        <View style={{ justifyContent: "center", alignItems: "center", paddingBottom: 150 }}>
-            <Text style={{ color: 'rgba(72,76,97,0.8)', textAlign: 'center', fontSize: 20 }}>Scan / Upload Card</Text>
-            <Text style={{ color: 'rgba(72,76,97,0.8)', textAlign: 'center', marginTop: 8, maxWidth: 300, fontSize: 14 }}>
-                To start, scan your card or choose a pre-existing image from your camera-roll.
+        <View style={preScanStyle.container}>
+            <Text style={preScanStyle.title}>Scan / Upload Card</Text>
+            <Text style={preScanStyle.description}>
+                To start, scan your card or choose a pre-existing image from your camera roll.
             </Text>
         </View>
     );
