@@ -5,14 +5,14 @@ const preScanStyle = StyleSheet.create({
     container: {
         justifyContent: "center",
         alignItems: "center",
-        paddingBottom: 150,
+        paddingTop: 200,
     },
     title: {
         color: 'rgba(72,76,97,0.8)',
         textAlign: 'center',
         fontSize: 20,
     },
-    description: {
+    subText: {
         color: 'rgba(72,76,97,0.8)',
         textAlign: 'center',
         marginTop: 8,
@@ -25,7 +25,7 @@ export default function PreScan() {
     return (
         <View style={preScanStyle.container}>
             <Text style={preScanStyle.title}>Scan / Upload Card</Text>
-            <Text style={preScanStyle.description}>
+            <Text style={preScanStyle.subText}>
                 To start, scan your card or choose a pre-existing image from your camera roll.
             </Text>
         </View>

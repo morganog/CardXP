@@ -10,7 +10,7 @@ const footerStyles = StyleSheet.create({
     position: 'absolute',
     bottom: 0
   },
-  text: {
+  footerText: {
     color: '#484C61',
   }
 });
@@ -18,7 +18,7 @@ const footerStyles = StyleSheet.create({
 const CardXPFooter = () => {
   return (
     <View style={footerStyles.container}>
-      <Text style={footerStyles.text}>
+      <Text style={footerStyles.footerText}>
         © 2025 CardXP. All rights reserved.{' '}
       </Text>
     </View>

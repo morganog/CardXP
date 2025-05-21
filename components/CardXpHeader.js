@@ -4,22 +4,23 @@ import { StyleSheet, Text, View } from 'react-native';
 const headerStyles = StyleSheet.create({
     container: {
         flex: 0.2,
-        paddingBottom: 20,
+        paddingTop: 5,
+        paddingBottom: 2,
         backgroundColor: "white",
         justifyContent: "center",   // center vertically
         alignItems: "center",       // center horizontally
     },
-    text: {
+    Title: {
         fontSize: 28,
         fontFamily: "KronaOne-Regular",
-        color: "#484C61",
+        color: "#484C61"
     }
 });
 
 const CardXpHeader = () => {
     return (
         <View style={headerStyles.container}>
-            <Text style={headerStyles.text}>CardXP</Text>
+            <Text style={headerStyles.Title}>CardXP</Text>
         </View>
     );
 }
