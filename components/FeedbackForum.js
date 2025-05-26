@@ -61,12 +61,14 @@ const FeedbackForum = () => {
             <TextInput 
                 value={firstName}
                 onChangeText={onChangeFirstName}
-                styles={styles.input} 
+                styles={styles.input}
+                placeholder="First Name" 
             />
             <TextInput 
                 value={email}
                 onChangeText={onChangeEmail}
                 styles={styles.input} 
+                placeholder="Email"
             />
             <TextInput 
                 value={message}
