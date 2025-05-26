@@ -3,14 +3,48 @@ import { ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "white"
+        backgroundColor: "white",
     },
     input: {
-        height: 40
-    }
-})
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        fontSize: 16,
+        borderColor: "#484C61",
+        backgroundColor: "#f2f2f2",
+    },
+    messageInput: {
+        height: 100,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        fontSize: 16,
+        borderColor: "#484C61",
+        backgroundColor: "#f2f2f2",
+    },
+    infoSection: {
+        fontSize: 16,
+        color: "#484C61",
+        margin: 12,
+        padding: 10,
+        marginVertical: 8,
+        textAlign: "center",
+        backgroundColor: "#f2f2f2",
+    },
+    headingSection: {
+        fontSize: 24,
+        color: "#484C61",
+        margin: 12,
+        padding: 10,
+        marginVertical: 8,
+        textAlign: "center",
+        fontWeight: "bold",
+    },
+});
 
-export default function FeedbackForum() {
+
+const FeedbackForum = () => {
     const [firstName, onChangeFirstName] = React.useState("");
     const [email, onChangeEmail] = React.useState("");
     const [message, onChangeMessage] = React.useState("");
@@ -37,11 +71,15 @@ export default function FeedbackForum() {
             <TextInput 
                 value={message}
                 onChangeText={onChangeMessage}
-                styles={styles.input} 
+                styles={styles.messageInput} 
+                multiline={true}
+                placeholder="Type your message here..."
             />
         </ScrollView>
     );
 }
+
+export default FeedbackForum;
 
 
 
