@@ -30,6 +30,7 @@ const menuSettings = [
     { id: "Grading Questions", title: "Grading Questions" },
     { id: "Privacy", title: "Privacy and Policy" },
     { id: "Terms", title: "Terms and Conditions" },
+    { id: "Feedback", title: "Feedback" },
 ];
 
 const Separator = () => <View style={settingsStyles.separator} />;
