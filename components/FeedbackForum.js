@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { ScrollView, StyleSheet, Text, TextInput } from 'react-native';
+import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
+
 
 const styles = StyleSheet.create({
     container: {
