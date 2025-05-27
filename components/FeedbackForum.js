@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         padding: 10,
         bottom: 10,
         marginVertical: 8,
-        textAlign: "justify",
+        textAlign: "center",
         backgroundColor: "#f2f2f2",
     },
     headingSection: {
