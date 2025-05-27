@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         margin: 10,
         position: 'absolute',
-        top: 40,
-        left: 10,
+        top: 46,
+        left: 10, 
     },
     buttonText: {
         alignItems: 'center',
@@ -25,7 +25,7 @@ const BackButton = () => {
 
     return (
         <TouchableOpacity style={styles.button} onPress={() => router.back()}>
-            <AntDesign style={styles.buttonText} name="left" size={24} color="white" />
+            <AntDesign style={styles.buttonText} name="left" size={20} color="white" />
         </TouchableOpacity>
     );
 };
