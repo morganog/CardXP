@@ -1,8 +1,9 @@
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import * as React from "react";
 import { StyleSheet, View, } from "react-native";
 import CardXpHeader from "../components/CardXpHeader";
 import PreScan from "../components/PreScan";
+import SettingsButton from "../components/SettingsButton";
 
 const styles = StyleSheet.create({
   container: {
@@ -24,8 +25,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Link style={styles.links} href="/settings">Settings</Link>
       <CardXpHeader />
+      <SettingsButton />
       <PreScan />
     </View>
   );

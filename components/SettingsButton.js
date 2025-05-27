@@ -1,32 +1,30 @@
-import { AntDesign } from "@expo/vector-icons";
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useRouter } from "expo-router";
-import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
     button: {
         paddingHorizontal: 8,
         paddingVertical: 8,
-        backgroundColor: '#484C61',
-        borderRadius: 12,
+        backgroundColor: 'transparent', 
         flexDirection: 'row',
         margin: 10,
         position: 'absolute',
-        top: 40,
-        left: 10,
+        top: 45,
+        right: 10, // Changed to right for settings button
     },
     buttonText: {
         alignItems: 'center',
     },
 });
 
-const BackButton = () => {
+const SettingsButton = () => {
     const router = useRouter();
 
     return (
-        <TouchableOpacity style={styles.button} onPress={() => router.back()}>
-            <AntDesign style={styles.buttonText} name="left" size={24} color="white" />
+        <TouchableOpacity style={styles.button} onPress={() => router.push('/settings')}>
+            <FontAwesome5 name="grip-lines" size={24} color="#484C61" />        
         </TouchableOpacity>
     );
-};
-export default BackButton;
+}
+export default SettingsButton;

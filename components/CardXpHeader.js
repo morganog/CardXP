@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const headerStyles = StyleSheet.create({
     container: {
         flex: 0.2,
-        paddingTop: 5,
+        paddingTop: 20,
         paddingBottom: 2,
         backgroundColor: "white",
         justifyContent: "center",   // center vertically
