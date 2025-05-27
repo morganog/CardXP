@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -49,37 +50,40 @@ const FeedbackForum = () => {
     const [email, onChangeEmail] = React.useState("");
     const [message, onChangeMessage] = React.useState("");
 
-
     return (
-        <ScrollView style={styles.container}>
-            <Text style={styles.headingSection}>
-                CardXP Feedback Forum
-            </Text>
-            <Text style={styles.infoSection}>
-                We value your feedback! Please share your thoughts, suggestions, or any issues you encounter while using CardXP. Your input helps us improve the app and provide a better experience for all users.
-            </Text>
-            <TextInput 
-                value={firstName}
-                onChangeText={onChangeFirstName}
-                styles={styles.input}
-                placeholder="First Name" 
-            />
-            <TextInput 
-                value={email}
-                onChangeText={onChangeEmail}
-                styles={styles.input} 
-                placeholder="Email"
-            />
-            <TextInput 
-                value={message}
-                onChangeText={onChangeMessage}
-                styles={styles.messageInput} 
-                multiline={true}
-                placeholder="Type your message here..."
-            />
-        </ScrollView>
+        <KeyboardAvoidingView
+        behavior={Platform.OS === "android" ? "padding" : "position"}
+        style={styles.container}>
+            <ScrollView style={styles.container} keyboardDismissMode="on-drag">
+                <Text style={styles.headingSection}>
+                    CardXP Feedback Forum
+                </Text>
+                <Text style={styles.infoSection}>
+                    We value your feedback! Please share your thoughts, suggestions, or any issues you encounter while using CardXP. Your input helps us improve the app and provide a better experience for all users.
+                </Text>
+                <TextInput
+                    value={firstName}
+                    onChangeText={onChangeFirstName}
+                    style={styles.input}
+                    placeholder="First Name"
+                />
+                <TextInput
+                    value={email}
+                    onChangeText={onChangeEmail}
+                    style={styles.input}
+                    placeholder="Email"
+                />
+                <TextInput
+                    value={message}
+                    onChangeText={onChangeMessage}
+                    style={styles.messageInput}
+                    multiline={true}
+                    placeholder="Type your message here..."
+                />
+            </ScrollView>
+        </KeyboardAvoidingView>
     );
-}
+};
 
 export default FeedbackForum;
 
