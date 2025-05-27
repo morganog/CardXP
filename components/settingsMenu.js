@@ -1,5 +1,6 @@
+import { useRouter } from 'expo-router';
 import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const settingsStyles = StyleSheet.create({
     container: {
@@ -37,14 +38,30 @@ const menuSettings = [
 
 const Separator = () => <View style={settingsStyles.separator} />;
 
-const Menu = ({ title }) => (
-    <View style={settingsStyles.innerContainer}>
-        <Text style={settingsStyles.title}>{title}</Text>
-    </View>
+const Menu = ({ title, onPress }) => (
+    <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
+        <View style={settingsStyles.innerContainer}>
+            <Text style={settingsStyles.title}>{title}</Text>
+        </View>
+    </TouchableOpacity>
 );
 
 const SettingsMenu = () => {
-    const renderItem = ({ item }) => <Menu title={item.title} />;
+    const router = useRouter();
+
+    const handlePress = (id) => {
+        if (id === "Feedback") {
+            router.push('/feedback');
+        }
+        // Add more navigation logic for other items if needed
+    };
+
+    const renderItem = ({ item }) => (
+        <Menu
+            title={item.title}
+            onPress={() => handlePress(item.id)}
+        />
+    );
 
     return (
         <View style={settingsStyles.container}>

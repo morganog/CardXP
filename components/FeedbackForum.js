@@ -1,11 +1,22 @@
 import * as React from 'react';
-import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput } from 'react-native';
+import {
+    Alert,
+    KeyboardAvoidingView,
+    Platform,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+} from 'react-native';
 
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingVertical: 100,
         backgroundColor: "white",
+        justifyContent: "center",
+        alignItems: "center",
     },
     input: {
         height: 40,
@@ -30,15 +41,17 @@ const styles = StyleSheet.create({
         color: "#484C61",
         margin: 12,
         padding: 10,
+        bottom: 10,
         marginVertical: 8,
-        textAlign: "center",
+        textAlign: "justify",
         backgroundColor: "#f2f2f2",
     },
     headingSection: {
-        fontSize: 24,
+        fontSize: 26,
         color: "#484C61",
         margin: 12,
-        padding: 10,
+        padding: 20,
+        bottom: 10,
         marginVertical: 8,
         textAlign: "center",
         fontWeight: "bold",
@@ -68,6 +81,7 @@ const FeedbackForum = () => {
                     onChangeText={onChangeFirstName}
                     style={styles.input}
                     placeholder="First Name"
+                    onFocus={() => Alert.alert("First Name is focused")}
                 />
                 <TextInput
                     value={email}
