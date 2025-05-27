@@ -53,9 +53,10 @@ const FeedbackForum = () => {
 
     return (
         <KeyboardAvoidingView
-        behavior={Platform.OS === "android" ? "padding" : "position"}
-        style={styles.container}>
-            <ScrollView style={styles.container} keyboardDismissMode="on-drag">
+            style={styles.container}
+            behavior={Platform.OS === "android" ? "padding" : "height"}
+        >
+            <ScrollView keyboardDismissMode="on-drag">
                 <Text style={styles.headingSection}>
                     CardXP Feedback Forum
                 </Text>
@@ -80,6 +81,7 @@ const FeedbackForum = () => {
                     style={styles.messageInput}
                     multiline={true}
                     placeholder="Type your message here..."
+                    maxLength={500}
                 />
             </ScrollView>
         </KeyboardAvoidingView>
