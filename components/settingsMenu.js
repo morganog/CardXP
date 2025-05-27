@@ -1,22 +1,24 @@
 import React from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 const settingsStyles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingTop: 60,
     },
     innerContainer: {
-        paddingHorizontal: 40,
+        paddingHorizontal: 30,
         paddingVertical: 20,
         flexDirection: "column",
-        alignItems: "left",
+        alignItems: "flex-start",
     },
     title: {
-        fontSize: 28,
-        fontFamily: "KronaOne-Regular",
+        fontSize: 22,
+        fontFamily: "SpaceMono-Regular",
         color: "#484C61",
-        textAlign: "center",
-        marginTop: 20,
+        textAlign: "left",
+        marginTop: 10,
+        marginBottom: 10,
     },
     separator: {
         borderBottomWidth: 1,
@@ -50,8 +52,8 @@ const SettingsMenu = () => {
                 data={menuSettings}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
-                ItemSeparatorComponent={Separator}>
-            </FlatList>
+                ItemSeparatorComponent={Separator}
+            />
         </View>
     );
 };
