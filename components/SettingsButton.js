@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         margin: 10,
         position: 'absolute',
-        top: 45,
-        right: 10, // Changed to right for settings button
+        top: 50,
+        right: 10,
     },
     buttonText: {
         alignItems: 'center',
