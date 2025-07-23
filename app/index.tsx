@@ -4,6 +4,7 @@ import { StyleSheet, View, } from "react-native";
 import CardXpHeader from "../components/CardXpHeader";
 import PreScan from "../components/PreScan";
 import SettingsButton from "../components/SettingsButton";
+import UploadButton from "../components/UploadButton";
 
 const styles = StyleSheet.create({
   container: {
@@ -18,8 +19,6 @@ const styles = StyleSheet.create({
   }
 });
 
-
-
 export default function App() {
   const router = useRouter();
 
@@ -28,6 +27,7 @@ export default function App() {
       <CardXpHeader />
       <SettingsButton />
       <PreScan />
+      <UploadButton />
     </View>
   );
 }
