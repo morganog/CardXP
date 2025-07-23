@@ -4,11 +4,12 @@ import { StyleSheet, Text, View } from 'react-native';
 const headerStyles = StyleSheet.create({
     container: {
         flex: 0.2,
-        paddingTop: 20,
+        paddingTop: 60,
         paddingBottom: 2,
         backgroundColor: "white",
         justifyContent: "center",   // center vertically
-        alignItems: "center",       // center horizontally
+        alignSelf: "center",       // center horizontally
+        position: "absolute",
     },
     Title: {
         fontSize: 28,

@@ -4,8 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 const preScanStyle = StyleSheet.create({
     container: {
         justifyContent: "center",
-        alignItems: "center",
-        paddingTop: 200,
+        alignSelf: "center",
+        position: "absolute",
+        paddingTop: 350,
     },
     title: {
         color: 'rgba(72,76,97,0.8)',

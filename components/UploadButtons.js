@@ -1,7 +1,7 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import * as ExpoImagePicker from 'expo-image-picker';
 import { useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 const styles = StyleSheet.create({
     button: {
@@ -10,9 +10,27 @@ const styles = StyleSheet.create({
     buttonRow: {
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 35,
+        alignSelf: 'center',
+        marginVertical: 450,
         marginHorizontal: 30,
+        position: 'absolute',
+    },
+    deleteButton: {
+        position: 'absolute',
+        alignSelf: 'center',
+        top: 670,
+        borderWidth: 2,
+        borderRadius: 12,
+        borderColor: 'grey',
+        zIndex: 2,
+    },
+    uploadedImage: {
+        alignSelf: 'center',
+        width: 450,
+        height: 450,
+        top: 180,
+        borderRadius: 12,
+        zIndex: 2,
     },
 });
 
@@ -38,12 +56,12 @@ const UploadButtons = () => {
         let result = await ExpoImagePicker.launchCameraAsync({
             mediaTypes: ['images'],
             allowsEditing: true,
-            aspect: [5, 7],
+            aspect: [1, 1],
             quality: 1,
             cameraType: ExpoImagePicker.CameraType.back,
         });
         if (!result.canceled) {
-            setImage(result.assets[0].uri);
+            await saveImage(result.assets[0].uri);
         }
     };
 
@@ -56,7 +74,7 @@ const UploadButtons = () => {
         let result = await ExpoImagePicker.launchImageLibraryAsync({
             mediaTypes: ['images'],
             allowsEditing: true,
-            aspect: [5, 7],
+            aspect: [1, 1],
             quality: 1,
         });
         if (!result.canceled) {
@@ -64,14 +82,42 @@ const UploadButtons = () => {
         }
     };
 
+    const saveImage = async (image) => {
+        try {
+            // upload image
+            setImage(image);
+            setModalVisible(false)
+        } catch (error) {
+            throw error;
+        }
+    };
+
+    const removeImage = async () => {
+        saveImage(null);
+    };
+
     return (
-        <View style={styles.buttonRow}>
-            <TouchableOpacity style={styles.button} onPress={pickImageFromCamera}>
-                <MaterialIcons name="camera-alt" size={28} color="grey" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={pickImageFromLibrary}>
-                <MaterialIcons name="photo-library" size={28} color="grey" />
-            </TouchableOpacity>
+        <View>
+            <View style={styles.buttonRow}>
+                <TouchableOpacity style={styles.button} onPress={pickImageFromCamera}>
+                    <MaterialIcons name="camera-alt" size={28} color="grey" />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={pickImageFromLibrary}>
+                    <MaterialIcons name="photo-library" size={28} color="grey" />
+                </TouchableOpacity>
+            </View>
+            {image && (
+                <View>
+                    <Image
+                        source={{ uri: image }}
+                        style={styles.uploadedImage}
+                        resizeMode="contain"
+                    />
+                    <TouchableOpacity style={styles.deleteButton} onPress={removeImage}>
+                        <MaterialIcons name="delete" size={38} color="grey" />
+                    </TouchableOpacity>
+                </View>
+            )}
         </View>
     );
 };
