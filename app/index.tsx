@@ -1,7 +1,8 @@
 import { useRouter } from "expo-router";
 import * as React from "react";
-import { StyleSheet, View, } from "react-native";
+import { SafeAreaView, StyleSheet } from 'react-native';
 import CardXpHeader from "../components/CardXpHeader";
+import GraderButton from "../components/GraderButton";
 import PreScan from "../components/PreScan";
 import SettingsButton from "../components/SettingsButton";
 import UploadButtons from "../components/UploadButtons";
@@ -23,11 +24,12 @@ export default function App() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <CardXpHeader />
       <SettingsButton />
       <PreScan />
+      <GraderButton />
       <UploadButtons />
-    </View>
+    </SafeAreaView>
   );
 }

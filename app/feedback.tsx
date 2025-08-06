@@ -1,6 +1,6 @@
 import BackButton from "@/components/BackButton";
 import * as React from "react";
-import { StyleSheet, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import FeedbackForum from "../components/FeedbackForum";
 
 const styles = StyleSheet.create({
@@ -30,16 +30,15 @@ const styles = StyleSheet.create({
   }
 });
 
-
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.backButton}>
         <BackButton />
       </View>
       <View style={styles.feedback}>
         <FeedbackForum />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }

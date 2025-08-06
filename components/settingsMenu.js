@@ -2,31 +2,6 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const settingsStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingTop: 110,
-    },
-    innerContainer: {
-        paddingHorizontal: 30,
-        paddingVertical: 20,
-        flexDirection: "column",
-        alignItems: "flex-start",
-    },
-    title: {
-        fontSize: 22,
-        fontFamily: "SpaceMono-Regular",
-        color: "#484C61",
-        textAlign: "left",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    separator: {
-        borderBottomWidth: 1,
-        borderColor: "grey",
-    }
-});
-
 const menuSettings = [
     { id: "FAQ", title: "FAQ" },
     { id: "Help", title: "Help" },
@@ -74,5 +49,30 @@ const SettingsMenu = () => {
         </View>
     );
 };
+
+const settingsStyles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingTop: 110,
+    },
+    innerContainer: {
+        paddingHorizontal: 30,
+        paddingVertical: 20,
+        flexDirection: "column",
+        alignItems: "flex-start",
+    },
+    title: {
+        fontSize: 22,
+        fontFamily: "SpaceMono-Regular",
+        color: "#484C61",
+        textAlign: "left",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    separator: {
+        borderBottomWidth: 1,
+        borderColor: "grey",
+    }
+});
 
 export default SettingsMenu;

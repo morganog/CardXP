@@ -3,37 +3,6 @@ import * as ExpoImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
-const styles = StyleSheet.create({
-    button: {
-        marginHorizontal: 10,
-    },
-    buttonRow: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignSelf: 'center',
-        marginVertical: 450,
-        marginHorizontal: 30,
-        position: 'absolute',
-    },
-    deleteButton: {
-        position: 'absolute',
-        alignSelf: 'center',
-        top: 670,
-        borderWidth: 2,
-        borderRadius: 12,
-        borderColor: 'grey',
-        zIndex: 2,
-    },
-    uploadedImage: {
-        alignSelf: 'center',
-        width: 450,
-        height: 450,
-        top: 180,
-        borderRadius: 12,
-        zIndex: 2,
-    },
-});
-
 const UploadButtons = () => {
     const [image, setImage] = useState(null);
 
@@ -56,7 +25,7 @@ const UploadButtons = () => {
         let result = await ExpoImagePicker.launchCameraAsync({
             mediaTypes: ['images'],
             allowsEditing: true,
-            aspect: [1, 1],
+            aspect: [2, 3],
             quality: 1,
             cameraType: ExpoImagePicker.CameraType.back,
         });
@@ -74,7 +43,7 @@ const UploadButtons = () => {
         let result = await ExpoImagePicker.launchImageLibraryAsync({
             mediaTypes: ['images'],
             allowsEditing: true,
-            aspect: [1, 1],
+            aspect: [2, 3],
             quality: 1,
         });
         if (!result.canceled) {
@@ -121,5 +90,36 @@ const UploadButtons = () => {
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    button: {
+        marginHorizontal: 10,
+    },
+    buttonRow: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        marginVertical: 450,
+        marginHorizontal: 30,
+        position: 'absolute',
+    },
+    deleteButton: {
+        position: 'absolute',
+        alignSelf: 'center',
+        top: 685,
+        borderWidth: 2,
+        borderRadius: 12,
+        borderColor: 'grey',
+        zIndex: 2,
+    },
+    uploadedImage: {
+        alignSelf: 'center',
+        width: 540,
+        height: 540,
+        top: 130,
+        borderRadius: 12,
+        zIndex: 2,
+    },
+});
 
 export default UploadButtons;

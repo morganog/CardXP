@@ -1,6 +1,6 @@
 import CardXpHeader from "@/components/CardXpHeader";
 import * as React from "react";
-import { StyleSheet, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import BackButton from "../components/BackButton";
 import SettingsMenu from "../components/settingsMenu";
 
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.cardXpHeaderWrapper}>
           <CardXpHeader />
@@ -46,7 +46,7 @@ export default function App() {
       <View style={styles.list}>
         <SettingsMenu />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -1,5 +1,14 @@
-import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+const CardXPFooter = () => {
+  return (
+    <View style={footerStyles.container}>
+      <Text style={footerStyles.footerText}>
+        © 2025 CardXP. All rights reserved.{' '}
+      </Text>
+    </View>
+  );
+}
 
 const footerStyles = StyleSheet.create({
   container: {
@@ -14,15 +23,5 @@ const footerStyles = StyleSheet.create({
     color: '#484C61',
   }
 });
-
-const CardXPFooter = () => {
-  return (
-    <View style={footerStyles.container}>
-      <Text style={footerStyles.footerText}>
-        © 2025 CardXP. All rights reserved.{' '}
-      </Text>
-    </View>
-  );
-}
 
 export default CardXPFooter;

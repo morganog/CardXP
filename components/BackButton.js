@@ -3,6 +3,16 @@ import { useRouter } from "expo-router";
 import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
+const BackButton = () => {
+    const router = useRouter();
+
+    return (
+        <TouchableOpacity style={styles.button} onPress={() => router.back()}>
+            <AntDesign style={styles.buttonText} name="left" size={20} color="white" />
+        </TouchableOpacity>
+    );
+};
+
 const styles = StyleSheet.create({
     button: {
         paddingHorizontal: 8,
@@ -20,13 +30,4 @@ const styles = StyleSheet.create({
     },
 });
 
-const BackButton = () => {
-    const router = useRouter();
-
-    return (
-        <TouchableOpacity style={styles.button} onPress={() => router.back()}>
-            <AntDesign style={styles.buttonText} name="left" size={20} color="white" />
-        </TouchableOpacity>
-    );
-};
 export default BackButton;

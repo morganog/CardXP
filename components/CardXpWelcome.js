@@ -1,5 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 
+const CardXpWelcome = () => {
+    return (
+        <View style={welcomeStyle.container}>
+            <Text style={welcomeStyle.title}>CardXP</Text>
+            <Text style={welcomeStyle.tagline}>Scanner & Grader</Text>
+        </View>
+    );
+};
+
 const welcomeStyle = StyleSheet.create({
     container: {
         justifyContent: "center",
@@ -16,14 +25,4 @@ const welcomeStyle = StyleSheet.create({
     }
 });
 
-const CardXpWelcome = () => {
-    return (
-        <View style={welcomeStyle.container}>
-            <Text style={welcomeStyle.title}>CardXP</Text>
-            <Text style={welcomeStyle.tagline}>Scanner & Grader</Text>
-        </View>
-    );
-};
-
 export default CardXpWelcome;
-// This component is a simple welcome screen for the CardXP app. It displays the app name and tagline in a centered view with a light gray background.

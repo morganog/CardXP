@@ -13,90 +13,6 @@ import {
 
 // USING EMAILJS FOR HANDLING EMAILS
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingVertical: 80,
-        backgroundColor: "white",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-        fontSize: 16,
-        borderColor: "#484C61",
-        backgroundColor: "#f2f2f2",
-        flex: 1,
-    },
-    inputError: {
-        borderColor: "red",
-        backgroundColor: "#ffeaea",
-    },
-    messageInput: {
-        height: 100,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-        fontSize: 16,
-        borderColor: "#484C61",
-        backgroundColor: "#f2f2f2",
-    },
-    messageInputError: {
-        borderColor: "red",
-        backgroundColor: "#ffeaea",
-    },
-    infoSection: {
-        fontSize: 16,
-        color: "#484C61",
-        margin: 12,
-        padding: 10,
-        bottom: 10,
-        marginVertical: 8,
-        textAlign: "center",
-        backgroundColor: "#f2f2f2",
-    },
-    headingSection: {
-        fontSize: 26,
-        color: "#484C61",
-        margin: 12,
-        padding: 20,
-        bottom: 10,
-        marginVertical: 8,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
-    submitButton: {
-        backgroundColor: "#484C61",
-        padding: 10,
-        borderRadius: 8,
-        paddingHorizontal: 20,
-        margin: 15,
-        alignItems: "center",
-        width: 200,
-        alignSelf: "center",
-    },
-    submitButtonText: {
-        color: "white",
-        fontSize: 18,
-        fontWeight: "bold",
-    },
-    inputRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginHorizontal: 1,
-    },
-    errorText: {
-        color: "red",
-        marginLeft: 16,
-        marginTop: -8,
-        marginBottom: 8,
-        fontSize: 14,
-    },
-});
-
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -245,5 +161,89 @@ const FeedbackForum = () => {
         </KeyboardAvoidingView>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingVertical: 80,
+        backgroundColor: "white",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        fontSize: 16,
+        borderColor: "#484C61",
+        backgroundColor: "#f2f2f2",
+        flex: 1,
+    },
+    inputError: {
+        borderColor: "red",
+        backgroundColor: "#ffeaea",
+    },
+    messageInput: {
+        height: 100,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        fontSize: 16,
+        borderColor: "#484C61",
+        backgroundColor: "#f2f2f2",
+    },
+    messageInputError: {
+        borderColor: "red",
+        backgroundColor: "#ffeaea",
+    },
+    infoSection: {
+        fontSize: 16,
+        color: "#484C61",
+        margin: 12,
+        padding: 10,
+        bottom: 10,
+        marginVertical: 8,
+        textAlign: "center",
+        backgroundColor: "#f2f2f2",
+    },
+    headingSection: {
+        fontSize: 26,
+        color: "#484C61",
+        margin: 12,
+        padding: 20,
+        bottom: 10,
+        marginVertical: 8,
+        textAlign: "center",
+        fontWeight: "bold",
+    },
+    submitButton: {
+        backgroundColor: "#484C61",
+        padding: 10,
+        borderRadius: 8,
+        paddingHorizontal: 20,
+        margin: 15,
+        alignItems: "center",
+        width: 200,
+        alignSelf: "center",
+    },
+    submitButtonText: {
+        color: "white",
+        fontSize: 18,
+        fontWeight: "bold",
+    },
+    inputRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginHorizontal: 1,
+    },
+    errorText: {
+        color: "red",
+        marginLeft: 16,
+        marginTop: -8,
+        marginBottom: 8,
+        fontSize: 14,
+    },
+});
 
 export default FeedbackForum;
