@@ -3,6 +3,19 @@ import * as React from "react";
 import { SafeAreaView, StyleSheet, View } from "react-native";
 import FeedbackForum from "../components/FeedbackForum";
 
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.backButton}>
+        <BackButton />
+      </View>
+      <View style={styles.feedback}>
+        <FeedbackForum />
+      </View>
+    </SafeAreaView>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,16 +42,3 @@ const styles = StyleSheet.create({
     top: 10,
   }
 });
-
-export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.backButton}>
-        <BackButton />
-      </View>
-      <View style={styles.feedback}>
-        <FeedbackForum />
-      </View>
-    </SafeAreaView>
-  );
-}

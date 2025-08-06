@@ -4,6 +4,22 @@ import { SafeAreaView, StyleSheet, View } from "react-native";
 import BackButton from "../components/BackButton";
 import SettingsMenu from "../components/settingsMenu";
 
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.header}>
+        <View style={styles.cardXpHeaderWrapper}>
+          <CardXpHeader />
+        </View>
+        <BackButton />
+      </View>
+      <View style={styles.list}>
+        <SettingsMenu />
+      </View>
+    </SafeAreaView>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -30,23 +46,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     top: 35,
     right: 50,
-    width: "150%", 
+    width: "150%",
   },
-})
-
-export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <View style={styles.cardXpHeaderWrapper}>
-          <CardXpHeader />
-        </View>
-        <BackButton />
-      </View>
-      <View style={styles.list}>
-        <SettingsMenu />
-      </View>
-    </SafeAreaView>
-  );
-}
+});
 
